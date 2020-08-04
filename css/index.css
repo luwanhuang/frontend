@@ -1,0 +1,107 @@
+.navpage {
+  background-color: rgba(0, 0, 0, 0.92);
+  color: #fff;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  max-width: 1000px;
+}
+.navList {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appleIcon {
+  display: none;
+}
+.navpage li {
+  list-style: none;
+}
+.navpage ul {
+  width: 100%;
+  padding: 5px;
+}
+
+.apple {
+  background-image: url(../img/apple.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 44px;
+  width: 44px;
+  /* background-color: #fff; */
+}
+
+.bag {
+  background-image: url(../img/bag.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 44px;
+  width: 44px;
+}
+
+@media only screen and (max-width: 760px) {
+  .navList {
+    display: none;
+  }
+  .appleIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+  }
+  .appleIcon > li {
+    margin: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  #forDrop {
+    display: none;
+  }
+  #forDrop:checked ~ label span {
+    top: 20px;
+    transition-property: top, transform;
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0s, 0.2s;
+  }
+  #forDrop:checked ~ label #one {
+    transform: rotate(33deg);
+  }
+  #forDrop:checked ~ label #two {
+    transform: rotate(-32deg);
+  }
+  label #one {
+    position: absolute;
+    top: 16px;
+  }
+  label #two {
+    position: absolute;
+    top: 24px;
+  }
+  #dropLabel {
+    height: 44px;
+    width: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  #dropLabel span {
+    height: 1px;
+    width: 19px;
+    background-color: #fff;
+    /*display: none;*/
+    /* transition: all 0.3s; */
+    transition-property: top, transform;
+    transition-duration: 0.4s, 0.4s;
+    transition-delay: 0.2s, 0s;
+    /* transition: top 0.5s;
+    transition: transform 0.5s 0.5s; */
+    /*设置旋转的中心点*/
+    /* transform-origin: left center; */
+  }
+}
